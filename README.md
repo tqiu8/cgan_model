@@ -35,7 +35,7 @@ pix2pix WGAN: either submit a batch job as: `qsub qsub_p2p_master_WGAN.sh` or in
 
 ### To use a different dataset:
 
-In the bash files, change the `--input_dir` to wherever the training examples of your dataset are located. 
+In the bash files, change the `--input_dir` to wherever the training examples of your dataset are located. If training BicycleWGAN or VAEGAN, change the name of the dataset on line 27: `bash setup_dataset.h facades` to whichever dataset you are using.
 
 ### Directory structure:
 ```
