@@ -40,6 +40,11 @@ pix2pix WGAN: either submit a batch job as: `qsub qsub_p2p_master_WGAN.sh` or in
 
 In the bash files, change the `--input_dir` to wherever the training examples of your dataset are located. 
 
+## Acknowledgements:
+We used code from: https://github.com/affinelayer/pix2pix-tensorflow for our pix2pix implementation. 
+
+https://github.com/kvmanohar22/img2imgGAN for BicycleGAN.
+
 
 
 
