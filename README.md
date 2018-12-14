@@ -11,10 +11,7 @@ A project comparing the performances of pix2pix, BicycleGAN, pix2pix WGAN, VAE G
   - `python tools/download-dataset.py cityscapes`
   - `python tools/download-dataset.py maps`
   - `python tools/download-dataset.py edges2shoes`
-  - `python tools/download-dataset.py edges2bags`
-  - `python tools/download-dataset.py rgbd`
-  - `python tools/download-dataset.py ADE20k`
-  
+  - `python tools/download-dataset.py edges2bags`  
   
  ### To run the models:
  
