@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #$ -P dl-course
 #$ -N p2p_no_WGAN_facades
-#$ -j n
+#$ -j y
 #$ -m bae
 #$ -M jcurci92@gmail.com
 #$ -V
