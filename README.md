@@ -40,6 +40,39 @@ pix2pix WGAN: either submit a batch job as: `qsub qsub_p2p_master_WGAN.sh` or in
 
 In the bash files, change the `--input_dir` to wherever the training examples of your dataset are located. 
 
+### Directory structure:
+```
+Bicycle_WGAN\
+  utils\
+    __init__.py   #constructor for datasets
+    utils.py    #helper functions
+   nnet\
+    __init__broken vae.py   #constructor for graphs of model
+    __init__.py   #constructor for graphs of model
+    __init__working_WGAN.py   #constructor for graphs of wgan model
+   config.py    #contains hyperparameters of models
+   main.py    #main training script
+   setup.py   #bibliographic information of model
+   setup_dataset.h    #bash script that performs additional preprocessing to datasets
+   requirements.txt     #module requirements for the code
+   qsub_vae_WGAN_facades.sh     #bash script for running VAE GAN on facades dataset
+   qsub_bicycle_WGAN_facades.sh     #bash script for running bicycle WGAN on facades dataset
+pix2pix\
+  pix2pix.py    #original pix2pix model
+  pix2pix_WGAN.py   #modified pix2pixWGAN model
+  qsub_p2p_master_WGAN.sh   #bash script for running pix2pix WGAN on facades
+  qsub_p2p_master_no_WGAN.sh    #bash script for running vanilla pix2pix on facades
+tools\
+  download-dataset.py   #script for downloading datasets
+  process.py            #helper functions
+  split.py              #splits into train, test, and val sets
+  test.py               #tests model
+  tfimage.py            #tensorflow functions for image processing
+utils\
+  preprocess.py         #re-organize and extract ADE20K dataset
+  combine_A_and_B.py    #pairs images for training
+```
+
 ## Acknowledgements:
 We used code from: https://github.com/affinelayer/pix2pix-tensorflow for our pix2pix implementation. 
 
