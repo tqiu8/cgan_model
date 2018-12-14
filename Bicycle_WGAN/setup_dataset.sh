@@ -27,7 +27,7 @@ function generate_dataset_file() {
 directory_exists ${DATASET_ROOT}
 cd ${DATASET_ROOT}
 
-DATASETS=(rgbd-scenes ADE20K maps cityscapes facades edges2shoes edges2handbags)
+DATASETS=($1)
 for file in ${DATASETS[@]}; do
    generate_dataset_file ${file}
 done

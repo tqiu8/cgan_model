@@ -24,6 +24,8 @@ module load cuda/8.0
 module load cudnn/6.0
 module load tensorflow/r1.3
 
+bash setup_dataset.sh
+
 python main.py --train \
 --model bicycle \
 --direction b2a \

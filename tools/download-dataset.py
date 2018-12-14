@@ -18,6 +18,7 @@ elif dataset == "ade20k":
     url = "https://drive.google.com/uc?export=download&id=1TDsySv_WP9apfCmiUFwwOckCsFqG8mF9"
 else:
     url = "https://people.eecs.berkeley.edu/~tinghuiz/projects/pix2pix/datasets/%s.tar.gz" % dataset
+
 with tempfile.TemporaryFile() as tmp:
     print("downloading", url)
     shutil.copyfileobj(urlopen(url), tmp)
@@ -26,5 +27,5 @@ with tempfile.TemporaryFile() as tmp:
     tar = tarfile.open(fileobj=tmp)
     tar.extractall()
     tar.close()
-    shutil.move("%s/" % dataset, "../data/")
+    shutil.move("%s/" % dataset, "../data/%s/" %dataset)
     print("done")
